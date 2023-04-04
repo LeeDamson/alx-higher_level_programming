@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+"""An empty class that defines a rectangle"""
 
-"""An empty class Rectangle that defines a rectangle:"""
 class Rectangle:
     def __init__(self, width=0, height=0):
-        """Private instance attributes: width(int), height(int)"""
+        """intialization
+
+        Args:
+            height(int):
+            width(int):
+        """
         self.__width = width
         self.__height = height
 
@@ -24,7 +29,7 @@ class Rectangle:
         if not isintstance(value, int):
             raise TypeError("width must be an integer")
         """if width is less than 0, raise a ValueError exception with the message width must be >= 0"""
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -35,6 +40,6 @@ class Rectangle:
         if not isintstance(value, int):
             raise TypeError("height must be an integer")
         """if height is less than 0, raise a ValueError exception with the message height must be >= 0"""
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
