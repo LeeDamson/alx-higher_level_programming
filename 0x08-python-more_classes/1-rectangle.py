@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""An empty class that defines a rectangle"""
+
+"""
+A class Rectangle
+"""
 
 
 class Rectangle:
@@ -10,6 +13,14 @@ class Rectangle:
             height(int):
             width(int):
         """
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
         self.width = width
         self.height = height
 
@@ -23,9 +34,9 @@ class Rectangle:
         """width must be an integer, otherwise raise a TypeError
         if width is less than 0, raise a ValueError"""
         if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError(" width must be >= 0")
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
         self.__width = value
 
     @property
